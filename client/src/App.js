@@ -26,9 +26,7 @@ const App = () => {
         <Route exact path='/'>
           <MovieList />
         </Route>
-        <Route path='/movies/:id'>
-          <Movie/>
-        </Route>
+        <Route path='/movies/:id' render={props => (<Movie {...props}/>)}/>
       </Switch>
     </div>
   );
